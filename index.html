@@ -3,9 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Shanis Sameer</title>
 
 <style>
+
 *{
     margin:0;
     padding:0;
@@ -14,148 +16,182 @@
 }
 
 body{
-    background:#0d1117;
+    background:#000;
     color:white;
-    line-height:1.6;
 }
 
-header{
-    text-align:center;
-    padding:80px 20px;
-}
-
-header h1{
-    font-size:3rem;
-}
-
-header p{
-    color:#b3b3b3;
-    margin-top:10px;
-}
-
-.btn{
-    display:inline-block;
-    margin-top:20px;
-    padding:12px 25px;
-    background:#238636;
-    color:white;
-    text-decoration:none;
-    border-radius:8px;
-}
-
-section{
+.container{
     max-width:1000px;
     margin:auto;
-    padding:60px 20px;
+    padding:60px 25px;
 }
 
-h2{
+.profile{
+    min-height:70vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+h1{
+    font-size:4rem;
     margin-bottom:20px;
-    color:#58a6ff;
 }
 
-.skills{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+.info{
+    color:#a0a0a0;
+    margin-bottom:10px;
+    font-size:1rem;
+}
+
+.description{
+    margin-top:30px;
+    color:#d0d0d0;
+    font-size:1.1rem;
+    line-height:1.8;
+}
+
+.links{
+    margin-top:35px;
+    display:flex;
     gap:15px;
+    flex-wrap:wrap;
 }
 
-.skill{
-    background:#161b22;
-    padding:20px;
+.links a{
+    text-decoration:none;
+    color:white;
+    border:1px solid #222;
+    padding:12px 22px;
     border-radius:10px;
-    text-align:center;
+    transition:0.3s;
 }
 
-.projects{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
+.links a:hover{
+    background:white;
+    color:black;
+}
+
+.contact-details{
+    margin-top:25px;
+    color:#8a8a8a;
+    line-height:2;
 }
 
 .project{
-    background:#161b22;
-    padding:20px;
-    border-radius:10px;
+    margin-top:40px;
+    background:#0f0f0f;
+    border:1px solid #222;
+    border-radius:16px;
+    padding:30px;
+}
+
+.project h2{
+    margin-bottom:15px;
+}
+
+.project p{
+    color:#cfcfcf;
+    line-height:1.8;
+    margin-bottom:20px;
+}
+
+.project a{
+    color:white;
+    text-decoration:none;
+}
+
+.project a:hover{
+    text-decoration:underline;
 }
 
 footer{
     text-align:center;
-    padding:40px;
-    color:#888;
+    color:#666;
+    padding:60px 20px;
+    border-top:1px solid #111;
 }
+
+footer p:first-child{
+    color:#b3b3b3;
+    font-size:1rem;
+}
+
+@media(max-width:768px){
+
+    h1{
+        font-size:2.6rem;
+    }
+
+    .container{
+        padding:40px 20px;
+    }
+
+}
+
 </style>
 </head>
-
 <body>
 
-<header>
+<div class="container">
+
+<section class="profile">
+
     <h1>Shanis Sameer</h1>
-    <p>BCA AI & Data Science Student | Python Developer | VFX Artist</p>
 
-    <a href="https://github.com/shanissameer" class="btn">
-        View GitHub
-    </a>
-</header>
+    <p class="info">📍 Kerala, India</p>
 
-<section>
-    <h2>About Me</h2>
+    <p class="info">🌐 English, Malayalam</p>
+
+    <div class="description">
+        Data Science • Python • Software Development
+    </div>
+
+    <div class="links">
+
+        <a href="mailto:shanissameer@gmail.com">
+            Email
+        </a>
+
+        <a href="https://instagram.com/shanissameer" target="_blank">
+            Instagram
+        </a>
+
+        <a href="https://github.com/shanissameer" target="_blank">
+            GitHub
+        </a>
+
+    </div>
+
+    
+
+</section>
+
+<section class="project">
+
+    <h2>Eluneo</h2>
 
     <p>
-        I am a BCA student specializing in AI, Data Science and Big Data Analytics.
-        I enjoy building software, learning Python, creating VFX edits in DaVinci Resolve,
-        and exploring Blender 3D.
+        An ongoing software project.
+        Features and improvements are added continuously as development progresses.
     </p>
+
+    <a href="YOUR_ELUNEO_GITHUB_LINK" target="_blank">
+        View Source Code →
+    </a>
+
 </section>
 
-<section>
-    <h2>Skills</h2>
-
-    <div class="skills">
-        <div class="skill">Python</div>
-        <div class="skill">SQL</div>
-        <div class="skill">AI & Data Science</div>
-        <div class="skill">GitHub</div>
-        <div class="skill">Firebase</div>
-        <div class="skill">DaVinci Resolve</div>
-        <div class="skill">VFX Editing</div>
-        <div class="skill">Blender</div>
-    </div>
-</section>
-
-<section>
-    <h2>Projects</h2>
-
-    <div class="projects">
-
-        <div class="project">
-            <h3>Shift Chat App</h3>
-            <p>Real-time chat application using Firebase.</p>
-        </div>
-
-        <div class="project">
-            <h3>Password Generator</h3>
-            <p>Python application for generating secure passwords.</p>
-        </div>
-
-        <div class="project">
-            <h3>Student Management System</h3>
-            <p>Python project for managing student records.</p>
-        </div>
-
-    </div>
-</section>
-
-<section>
-    <h2>Contact</h2>
-
-    <p>Email: shanissameer@email.com</p>
-    <p>Instagram: @shanissameer</p>
-    <p>GitHub: github.com/shanissameer</p>
-</section>
+</div>
 
 <footer>
-    © 2026 Shanis Sameer
+
+    <p>shanissameer@gmail.com</p>
+
+    <br>
+
+    <p>© 2026 Shanis Sameer</p>
+
 </footer>
 
 </body>
