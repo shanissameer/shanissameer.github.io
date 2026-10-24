@@ -1,203 +1,326 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Shanis Sameer</title>
+  <title>Shanis Sameer | Data Analyst Portfolio</title>
 
-<style>
+  <meta
+    name="description"
+    content="Shanis Sameer's Data Analytics portfolio featuring Python, Pandas, SQL, data cleaning, and data visualization."
+  >
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, sans-serif;
-}
-
-body{
-    background:#000;
-    color:white;
-}
-
-.container{
-    max-width:1000px;
-    margin:auto;
-    padding:60px 25px;
-}
-
-.profile{
-    min-height:70vh;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-}
-
-h1{
-    font-size:4rem;
-    margin-bottom:20px;
-}
-
-.info{
-    color:#a0a0a0;
-    margin-bottom:10px;
-    font-size:1rem;
-}
-
-.description{
-    margin-top:30px;
-    color:#d0d0d0;
-    font-size:1.1rem;
-    line-height:1.8;
-}
-
-.links{
-    margin-top:35px;
-    display:flex;
-    gap:15px;
-    flex-wrap:wrap;
-}
-
-.links a{
-    text-decoration:none;
-    color:white;
-    border:1px solid #222;
-    padding:12px 22px;
-    border-radius:10px;
-    transition:0.3s;
-}
-
-.links a:hover{
-    background:white;
-    color:black;
-}
-
-.contact-details{
-    margin-top:25px;
-    color:#8a8a8a;
-    line-height:2;
-}
-
-.project{
-    margin-top:40px;
-    background:#0f0f0f;
-    border:1px solid #222;
-    border-radius:16px;
-    padding:30px;
-}
-
-.project h2{
-    margin-bottom:15px;
-}
-
-.project p{
-    color:#cfcfcf;
-    line-height:1.8;
-    margin-bottom:20px;
-}
-
-.project a{
-    color:white;
-    text-decoration:none;
-}
-
-.project a:hover{
-    text-decoration:underline;
-}
-
-footer{
-    text-align:center;
-    color:#666;
-    padding:60px 20px;
-    border-top:1px solid #111;
-}
-
-footer p:first-child{
-    color:#b3b3b3;
-    font-size:1rem;
-}
-
-@media(max-width:768px){
-
-    h1{
-        font-size:2.6rem;
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
 
-    .container{
-        padding:40px 20px;
+    html {
+      scroll-behavior: smooth;
     }
 
-}
+    body {
+      background: #000;
+      color: #f5f5f5;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
 
-</style>
+    a {
+      color: inherit;
+    }
+
+    .container {
+      width: min(100% - 48px, 980px);
+      margin: 0 auto;
+    }
+
+    /* Profile */
+    .hero {
+      padding-top: 90px;
+      padding-bottom: 100px;
+    }
+
+    .hero h1 {
+      font-size: clamp(42px, 7vw, 68px);
+      line-height: 1.15;
+      letter-spacing: -2px;
+      font-weight: 750;
+      margin-bottom: 20px;
+    }
+
+    .profile-info {
+      color: #a8a8a8;
+      font-size: 16px;
+      margin-bottom: 4px;
+    }
+
+    .headline {
+      margin-top: 38px;
+      margin-bottom: 34px;
+      color: #dedede;
+      font-size: 18px;
+    }
+
+    /* Social links */
+    .social-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .social-links a {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px 23px;
+      border: 1px solid #292929;
+      border-radius: 12px;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 500;
+      transition: background 0.2s, border-color 0.2s;
+    }
+
+    .social-links a:hover {
+      background: #171717;
+      border-color: #555;
+    }
+
+    /* Projects */
+    .projects {
+      padding-bottom: 90px;
+    }
+
+    .project-card {
+      background: #101010;
+      border: 1px solid #292929;
+      border-radius: 18px;
+      padding: 30px;
+      transition: border-color 0.2s;
+    }
+
+    .project-card:hover {
+      border-color: #444;
+    }
+
+    .project-card h2 {
+      font-size: 25px;
+      line-height: 1.4;
+      letter-spacing: -0.5px;
+      margin-bottom: 14px;
+      font-weight: 700;
+    }
+
+    .project-description {
+      color: #c4c4c4;
+      font-size: 16px;
+      line-height: 1.8;
+    }
+
+    /* Technology tags */
+    .tech-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 20px;
+      margin-bottom: 24px;
+    }
+
+    .tech-tags span {
+      display: inline-block;
+      background: #202020;
+      color: #a8a8a8;
+      border: 1px solid #343434;
+      border-radius: 6px;
+      padding: 4px 10px;
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 1.6;
+    }
+
+    /* Project link */
+    .project-link {
+      display: inline-block;
+      color: #f5f5f5;
+      font-size: 15px;
+      font-weight: 500;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .project-link:hover {
+      color: #aaa;
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid #202020;
+      text-align: center;
+      padding: 55px 20px;
+      color: #777;
+      font-size: 14px;
+    }
+
+    .footer-email {
+      display: inline-block;
+      color: #bdbdbd;
+      text-decoration: none;
+      margin-bottom: 12px;
+      font-size: 15px;
+    }
+
+    .footer-email:hover {
+      color: #fff;
+    }
+
+    /* Mobile layout */
+    @media (max-width: 600px) {
+      .container {
+        width: calc(100% - 36px);
+      }
+
+      .hero {
+        padding-top: 55px;
+        padding-bottom: 65px;
+      }
+
+      .hero h1 {
+        letter-spacing: -1.5px;
+      }
+
+      .headline {
+        font-size: 16px;
+        margin-top: 28px;
+        margin-bottom: 26px;
+      }
+
+      .social-links {
+        gap: 10px;
+      }
+
+      .social-links a {
+        padding: 9px 16px;
+        font-size: 14px;
+      }
+
+      .projects {
+        padding-bottom: 60px;
+      }
+
+      .project-card {
+        padding: 22px;
+        border-radius: 15px;
+      }
+
+      .project-card h2 {
+        font-size: 21px;
+      }
+
+      .project-description {
+        font-size: 14px;
+      }
+
+      .tech-tags {
+        gap: 7px;
+        margin-top: 16px;
+        margin-bottom: 20px;
+      }
+
+      .tech-tags span {
+        font-size: 11px;
+      }
+
+      footer {
+        padding: 40px 18px;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-<div class="container">
-
-<section class="profile">
-
+  <!-- Profile -->
+  <header class="hero container">
     <h1>Shanis Sameer</h1>
 
-    <p class="info">📍 Kerala, India</p>
+    <p class="profile-info">📍 Kerala, India</p>
+    <p class="profile-info">🌐 English, Malayalam</p>
 
-    <p class="info">🌐 English, Malayalam</p>
-
-    <div class="description">
-        Data Science • Python • Software Development
-    </div>
-
-    <div class="links">
-
-        <a href="mailto:shanissameer@gmail.com">
-            Email
-        </a>
-
-        <a href="https://instagram.com/shanissameer" target="_blank">
-            Instagram
-        </a>
-
-        <a href="https://github.com/shanissameer" target="_blank">
-            GitHub
-        </a>
-
-    </div>
-
-    
-
-</section>
-
-<section class="project">
-
-    <h2>Customer Data Cleaning & Analysis</h2>
-
-    <p>
-        Cleaned and analyzed customer data using Python and Pandas. Handled missing values, removed duplicates, corrected data issues, and created visualizations using Matplotlib.
-        Python · Pandas · Matplotlib · Data Cleaning
+    <p class="headline">
+      Aspiring Data Analyst · Python · Pandas · SQL
     </p>
-<div class="tech-tags">
-  <span>Python</span>
-  <span>Pandas</span>
-  <span>Matplotlib</span>
-  <span>Data Cleaning</span>
-</div>
-    <a href="https://github.com/shanissameer/ecommerce-data-cleaning" target="_blank">
+
+    <nav class="social-links" aria-label="Social links">
+      <a href="mailto:shanissameer@gmail.com">Email</a>
+
+      <!-- Replace with your actual Instagram profile URL -->
+      <a
+        href="https://www.instagram.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Instagram
+      </a>
+
+      <a
+        href="https://github.com/shanissameer"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        GitHub
+      </a>
+    </nav>
+  </header>
+
+  <!-- Projects -->
+  <main class="projects container">
+
+    <article class="project-card">
+      <h2>Customer Data Cleaning &amp; Analysis</h2>
+
+      <p class="project-description">
+        Cleaned and analyzed customer data using Python and Pandas.
+        Handled missing values, removed duplicates, corrected data
+        issues, and created visualizations using Matplotlib to
+        explore patterns and gain useful insights.
+      </p>
+
+      <div class="tech-tags" aria-label="Technologies used">
+        <span>Python</span>
+        <span>Pandas</span>
+        <span>Matplotlib</span>
+        <span>Data Cleaning</span>
+        <span>Data Analysis</span>
+      </div>
+
+      <!-- Replace with your actual project repository URL -->
+      <a
+        class="project-link"
+        href="https://github.com/shanissameer/customer-age-analysis"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         View Source Code →
+      </a>
+    </article>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <a class="footer-email" href="mailto:shanissameer@gmail.com">
+      shanissameer@gmail.com
     </a>
 
-</section>
-
-</div>
-
-<footer>
-
-    <p>shanissameer@gmail.com</p>
-
-    <br>
-
     <p>© 2026 Shanis Sameer</p>
-
-</footer>
+  </footer>
 
 </body>
 </html>
